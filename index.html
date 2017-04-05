@@ -89,14 +89,18 @@
 	//2、完成游戏的过渡阶段
 	//2.1、加载动画图片
 	var loadings=[];
-	loadings[0]=new Image();
+	/*loadings[0]=new Image();
 	loadings[0].src="images/game_loading1.png";
 	loadings[1]=new Image();
 	loadings[1].src="images/game_loading2.png";
 	loadings[2]=new Image();
 	loadings[2].src="images/game_loading3.png";
 	loadings[3]=new Image();
-	loadings[3].src="images/game_loading4.png";
+	loadings[3].src="images/game_loading4.png";*/
+	for(var i=0;i<4;i++){
+		loadings[i]=new Image();
+		loadings[i].src="images/game_loading"+(i+1)+".png";
+	};
 	//2.2、初始化动画图片的数据内容
 	var LOADING={
 		imgs:loadings,
@@ -389,31 +393,37 @@
 	var enemies1=[];//小飞机
 	enemies1[0]=new Image();
 	enemies1[0].src="images/enemy1.png";
-	enemies1[1]=new Image();
+	/*enemies1[1]=new Image();
 	enemies1[1].src="images/enemy1_down1.png";
 	enemies1[2]=new Image();
 	enemies1[2].src="images/enemy1_down2.png";
 	enemies1[3]=new Image();
 	enemies1[3].src="images/enemy1_down3.png";
 	enemies1[4]=new Image();
-	enemies1[4].src="images/enemy1_down4.png";
+	enemies1[4].src="images/enemy1_down4.png";*/
 	var enemies2=[];//中飞机
 	enemies2[0]=new Image();
 	enemies2[0].src="images/enemy2.png";
-	enemies2[1]=new Image();
+	/*enemies2[1]=new Image();
 	enemies2[1].src="images/enemy2_down1.png";
 	enemies2[2]=new Image();
 	enemies2[2].src="images/enemy2_down2.png";
 	enemies2[3]=new Image();
 	enemies2[3].src="images/enemy2_down3.png";
 	enemies2[4]=new Image();
-	enemies2[4].src="images/enemy2_down4.png";
+	enemies2[4].src="images/enemy2_down4.png";*/
+	for(var i=1;i<5;i++){
+		enemies1[i]=new Image();
+		enemies1[i].src="images/enemy1_down"+i+".png";
+		enemies2[i]=new Image();
+		enemies2[i].src="images/enemy2_down"+i+".png";
+	}
 	var enemies3=[];//大飞机
 	enemies3[0]=new Image();
 	enemies3[0].src="images/enemy3_n1.png";
 	enemies3[1]=new Image();
 	enemies3[1].src="images/enemy3_n2.png";
-	enemies3[2]=new Image();
+	/*enemies3[2]=new Image();
 	enemies3[2].src="images/enemy3_down1.png";
 	enemies3[3]=new Image();
 	enemies3[3].src="images/enemy3_down2.png";
@@ -424,7 +434,11 @@
 	enemies3[6]=new Image();
 	enemies3[6].src="images/enemy3_down5.png";
 	enemies3[7]=new Image();
-	enemies3[7].src="images/enemy3_down6.png";
+	enemies3[7].src="images/enemy3_down6.png";*/
+	for(var i=2;i<8;i++){
+		enemies3[i]=new Image();
+		enemies3[i].src="images/enemy3_down"+(i-1)+".png";
+	}
 	//3.3.2、初始化敌方飞机的数据内容
 	var ENEMY1={
 		imgs:enemies1,
